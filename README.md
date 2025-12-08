@@ -5,10 +5,19 @@
 Built with Tkinter, it offers a clean, modern interface for students and developers exploring compiler design, tokenization, and language processing.  
 This tool makes it easy to load code, analyze it, and view token results—all inside a simple, visually appealing GUI.
 
+**📂 Supported File Types:**  
+- `.zlang` – Z-Language source files  
+- `.txt` – Plain text files  
+- Any other plain text file  
+
+**🧩 Requirements:**  
+- Python 3.8 or higher  
+- Tkinter (included in most Python installations)  
+- No external libraries needed  
 
 ## 🎯 What You Can Do
 **With the Z Lexer UI, you can:**  
-- 📄 Load `.zlang` source files  
+- 📄 Load `.zlang` or `.txt` files  
 - 🧠 Perform lexical analysis instantly  
 - 📊 View tokens in a table (Type • Lexeme • Line)  
 - 📤 Export tokens to CSV  
@@ -42,7 +51,6 @@ This tool makes it easy to load code, analyze it, and view token results—all i
 **📁 CSV Export**  
 - Save token results quickly  
 - Great for documentation and analysis  
-
 
 ## 🖥️ How to Use
 **▶️ Run the Program**  
