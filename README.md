@@ -1,34 +1,55 @@
-A graphical interface for performing lexical analysis on Z-Language source code.
+# Z Lang: No Cap, Just Code ⚡
+---
 
-Overview
-• The Z-Language Lexer UI provides an easy-to-use Tkinter-based interface that allows users to:
-• Load .txt or .z source files
-• Analyze code and generate tokens
-• View tokens in a table (type, lexeme, line number)
-• Export results to CSV
-• Clear and re-run analysis anytime
+## 🔍 What Is the Z Lexer UI?
+**The Z-Lang Lexer UI** is a graphical tool designed to perform lexical analysis on Z-Language source code.  
+Built with Tkinter, it offers a clean, modern interface for students and developers exploring compiler design, tokenization, and language processing.  
+This tool makes it easy to load code, analyze it, and view token results—all inside a simple, visually appealing GUI.
 
-Features
-• Modern Blue-Themed UI using Tkinter + ttk
-• Real-time Lexical Analysis powered by a custom Lexer
-• Supports keywords, identifiers, numbers, operators, delimiters, strings, and comments
-• Scrollable token table for large inputs
-• CSV export for documentation or debugging
-• Error detection for unexpected symbols or unterminated strings
+---
 
-How to Use
-1.) Run the script:
+## 🎯 What You Can Do
+**With the Z Lexer UI, you can:**  
+- 📄 Load `.txt` or `.z` source files  
+- 🧠 Perform lexical analysis instantly  
+- 📊 View tokens in a table (Type • Lexeme • Line)  
+- 📤 Export tokens to CSV  
+- 🔄 Clear and re-run analysis anytime  
+
+---
+
+## 🚀 Key Features
+**🎨 Modern Blue-Themed UI**  
+- Clean interface built with Tkinter + ttk  
+- Smooth styling and user-focused layout  
+
+**⚡ Real-Time Lexical Analysis**  
+- Custom-built Lexer class  
+- Detects:  
+  - Keywords  
+  - Identifiers  
+  - Numbers  
+  - Operators  
+  - Delimiters  
+  - Strings  
+  - Comments  
+
+**📜 Scrollable Token Table**  
+- Perfect for large source files  
+- Organized, readable, and responsive  
+
+**🛠️ Error Handling**  
+- Identifies unexpected characters  
+- Detects unterminated string literals  
+- Helps with debugging and testing  
+
+**📁 CSV Export**  
+- Save token results quickly  
+- Great for documentation and analysis  
+
+---
+
+## 🖥️ How to Use
+**▶️ Run the Program**  
+```bash
 python "Z Lexer UI.py"
-2.) Click Load File to import a Z-Language source file
-3.) Click Analyze to tokenize the code
-4.) View tokens in the table
-5.) Click Export CSV to save results
-6.) Click Clear to remove inputs and start fresh
-
-File Types Supported
-.zlang
-
-Requirements
-• Python 3.8+
-• Tkinter (bundled with most Python installations)
-• No external libraries are required.
