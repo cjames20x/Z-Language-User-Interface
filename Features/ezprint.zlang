@@ -1,0 +1,4 @@
+// No format specifiers needed!
+NUMBS HighScore = 420;
+TEXT PlayerName = "GenZCoder";
+SPILL("Player: ", PlayerName, " Score: ", HighScore);
