@@ -1,2 +1,0 @@
-FIXED NUMBS maxScore = 100;   // const int
-SHADY NUMBS statusFlag;       // volatile int
