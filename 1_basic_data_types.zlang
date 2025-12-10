@@ -1,8 +1,0 @@
-NUMBS age = 20;
-DECI grade = 89.5;
-DUO precise = 3.1415926535;
-LETT initial = 'A';
-SMALL smallValue = 12;
-BIG bigValue = 999999;
-CAP NUMBS signedNum = -10;
-NOCAP NUMBS idNumber = 12345;
