@@ -1,4 +1,0 @@
-NUMBS x = 10;
-NUMBS y = LENGTH(x);   // sizeof(x)
-
-DROP 0;                // return 0
