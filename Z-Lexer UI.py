@@ -75,6 +75,7 @@ class TokenType(Enum):
     TOKEN_OP_INCREMENT = auto()
     TOKEN_OP_DECREMENT = auto()
     TOKEN_KEYWORD_ALIAS = auto()
+    TOKEN_KEYWORD_BIG = auto()
     TOKEN_KEYWORD_BLEND = auto()
     TOKEN_KEYWORD_BOOL = auto()
     TOKEN_KEYWORD_BOUNCE = auto()
@@ -84,6 +85,7 @@ class TokenType(Enum):
     TOKEN_KEYWORD_DECI = auto()
     TOKEN_KEYWORD_DOUBLE = auto()
     TOKEN_KEYWORD_DROP = auto()
+    TOKEN_KEYWORD_DUO = auto()
     TOKEN_KEYWORD_ELSE = auto()
     TOKEN_KEYWORD_EMOJI = auto()
     TOKEN_KEYWORD_EMPTY = auto()
@@ -104,6 +106,7 @@ class TokenType(Enum):
     TOKEN_KEYWORD_NORM = auto()
     TOKEN_KEYWORD_NUMBS = auto()
     TOKEN_KEYWORD_OUT = auto()
+    TOKEN_KEYWORD_SMALL = auto()
     TOKEN_KEYWORD_SHADY = auto()
     TOKEN_KEYWORD_SPILL = auto()
     TOKEN_KEYWORD_STAY = auto()
@@ -121,6 +124,7 @@ class TokenType(Enum):
     TOKEN_FUNCTION_MAX = auto()
     TOKEN_FUNCTION_MIN = auto()
     TOKEN_FUNCTION_FINDSTRING = auto()
+    TOKEN_DELIMITER_COLON = auto()
     TOKEN_DELIMITER_SEMICOLON = auto()
     TOKEN_DELIMITER_LPAREN = auto()
     TOKEN_DELIMITER_RPAREN = auto()
@@ -138,53 +142,56 @@ TOKEN_TYPE_TO_STRING = {t: t.name for t in TokenType}
 
 # Keywords mapping
 KEYWORDS = {
-    "alias": TokenType.TOKEN_KEYWORD_ALIAS,
-    "blend": TokenType.TOKEN_KEYWORD_BLEND,
-    "bool": TokenType.TOKEN_KEYWORD_BOOL,
-    "bounce": TokenType.TOKEN_KEYWORD_BOUNCE,
-    "cap": TokenType.TOKEN_KEYWORD_CAP,
-    "case": TokenType.TOKEN_KEYWORD_CASE,
-    "core": TokenType.TOKEN_KEYWORD_CORE,
-    "deci": TokenType.TOKEN_KEYWORD_DECI,
-    "double": TokenType.TOKEN_KEYWORD_DOUBLE,
-    "drop": TokenType.TOKEN_KEYWORD_DROP,
-    "else": TokenType.TOKEN_KEYWORD_ELSE,
-    "emoji": TokenType.TOKEN_KEYWORD_EMOJI,
-    "empty": TokenType.TOKEN_KEYWORD_EMPTY,
-    "enum": TokenType.TOKEN_KEYWORD_ENUM,
-    "fam": TokenType.TOKEN_KEYWORD_FAM,
-    "fixed": TokenType.TOKEN_KEYWORD_FIXED,
-    "for": TokenType.TOKEN_KEYWORD_FOR,
-    "grab": TokenType.TOKEN_KEYWORD_GRAB,
-    "if": TokenType.TOKEN_KEYWORD_IF,
-    "import": TokenType.TOKEN_KEYWORD_IMPORT,
-    "length": TokenType.TOKEN_KEYWORD_LENGTH,
-    "lett": TokenType.TOKEN_KEYWORD_LETT,
-    "maxi": TokenType.TOKEN_KEYWORD_MAXI,
-    "mini": TokenType.TOKEN_KEYWORD_MINI,
-    "matic": TokenType.TOKEN_KEYWORD_MATIC,
-    "next": TokenType.TOKEN_KEYWORD_NEXT,
-    "nocap": TokenType.TOKEN_KEYWORD_NOCAP,
-    "norm": TokenType.TOKEN_KEYWORD_NORM,
-    "numbs": TokenType.TOKEN_KEYWORD_NUMBS,
-    "out": TokenType.TOKEN_KEYWORD_OUT,
-    "shady": TokenType.TOKEN_KEYWORD_SHADY,
-    "spill": TokenType.TOKEN_KEYWORD_SPILL,
-    "stay": TokenType.TOKEN_KEYWORD_STAY,
-    "struct": TokenType.TOKEN_KEYWORD_STRUCT,
-    "swim": TokenType.TOKEN_KEYWORD_SWIM,
-    "switch": TokenType.TOKEN_KEYWORD_SWITCH,
-    "tag": TokenType.TOKEN_KEYWORD_TAG,
-    "text": TokenType.TOKEN_KEYWORD_TEXT,
-    "vibe": TokenType.TOKEN_KEYWORD_VIBE,
-    "while": TokenType.TOKEN_KEYWORD_WHILE,
-    "zaved": TokenType.TOKEN_KEYWORD_ZAVED,
-    "avg": TokenType.TOKEN_FUNCTION_AVG,
-    "ascending": TokenType.TOKEN_FUNCTION_ASCENDING,
-    "descending": TokenType.TOKEN_FUNCTION_DESCENDING,
-    "max": TokenType.TOKEN_FUNCTION_MAX,
-    "min": TokenType.TOKEN_FUNCTION_MIN,
-    "findstring": TokenType.TOKEN_FUNCTION_FINDSTRING,
+    "ALIAS": TokenType.TOKEN_KEYWORD_ALIAS,
+    "BIG": TokenType.TOKEN_KEYWORD_BIG,
+    "BLEND": TokenType.TOKEN_KEYWORD_BLEND,
+    "BOOL": TokenType.TOKEN_KEYWORD_BOOL,
+    "BOUNCE": TokenType.TOKEN_KEYWORD_BOUNCE,
+    "CAP": TokenType.TOKEN_KEYWORD_CAP,
+    "CASE": TokenType.TOKEN_KEYWORD_CASE,
+    "CORE": TokenType.TOKEN_KEYWORD_CORE,
+    "DECI": TokenType.TOKEN_KEYWORD_DECI,
+    "DOUBLE": TokenType.TOKEN_KEYWORD_DOUBLE,
+    "DROP": TokenType.TOKEN_KEYWORD_DROP,
+    "DUO": TokenType.TOKEN_KEYWORD_DUO,
+    "ELSE": TokenType.TOKEN_KEYWORD_ELSE,
+    "EMOJI": TokenType.TOKEN_KEYWORD_EMOJI,
+    "EMPTY": TokenType.TOKEN_KEYWORD_EMPTY,
+    "ENUM": TokenType.TOKEN_KEYWORD_ENUM,
+    "FAM": TokenType.TOKEN_KEYWORD_FAM,
+    "FIXED": TokenType.TOKEN_KEYWORD_FIXED,
+    "FOR": TokenType.TOKEN_KEYWORD_FOR,
+    "GRAB": TokenType.TOKEN_KEYWORD_GRAB,
+    "IF": TokenType.TOKEN_KEYWORD_IF,
+    "IMPORT": TokenType.TOKEN_KEYWORD_IMPORT,
+    "LENGTH": TokenType.TOKEN_KEYWORD_LENGTH,
+    "LETT": TokenType.TOKEN_KEYWORD_LETT,
+    "MAXI": TokenType.TOKEN_KEYWORD_MAXI,
+    "MINI": TokenType.TOKEN_KEYWORD_MINI,
+    "MATIC": TokenType.TOKEN_KEYWORD_MATIC,
+    "NEXT": TokenType.TOKEN_KEYWORD_NEXT,
+    "NOCAP": TokenType.TOKEN_KEYWORD_NOCAP,
+    "NORM": TokenType.TOKEN_KEYWORD_NORM,
+    "NUMBS": TokenType.TOKEN_KEYWORD_NUMBS,
+    "OUT": TokenType.TOKEN_KEYWORD_OUT,
+    "SMALL": TokenType.TOKEN_KEYWORD_SMALL,
+    "SHADY": TokenType.TOKEN_KEYWORD_SHADY,
+    "SPILL": TokenType.TOKEN_KEYWORD_SPILL,
+    "STAY": TokenType.TOKEN_KEYWORD_STAY,
+    "STRUCT": TokenType.TOKEN_KEYWORD_STRUCT,
+    "SWIM": TokenType.TOKEN_KEYWORD_SWIM,
+    "SWITCH": TokenType.TOKEN_KEYWORD_SWITCH,
+    "TAG": TokenType.TOKEN_KEYWORD_TAG,
+    "TEXT": TokenType.TOKEN_KEYWORD_TEXT,
+    "VIBE": TokenType.TOKEN_KEYWORD_VIBE,
+    "WHILE": TokenType.TOKEN_KEYWORD_WHILE,
+    "ZAVED": TokenType.TOKEN_KEYWORD_ZAVED,
+    "AVG": TokenType.TOKEN_FUNCTION_AVG,
+    "ASCENDING": TokenType.TOKEN_FUNCTION_ASCENDING,
+    "DESCENDING": TokenType.TOKEN_FUNCTION_DESCENDING,
+    "MAX": TokenType.TOKEN_FUNCTION_MAX,
+    "MIN": TokenType.TOKEN_FUNCTION_MIN,
+    "FINDSTRING": TokenType.TOKEN_FUNCTION_FINDSTRING,
 }
 
 # ---------------- TOKEN CLASS ---------------- #
@@ -251,6 +258,19 @@ class Lexer:
         self.next_char()
         return Token(TokenType.TOKEN_KEYWORD_TEXT, self.source[self.start:self.current], self.token_start_line)
 
+    def handle_character(self):
+        # We expect a single character, e.g., 'A'
+        if self.is_at_end() or self.peek() == "'":
+            return self.error_token("Empty or malformed character literal.")
+
+        self.next_char()  # Consume the character inside the quotes
+
+        if self.peek() != "'":
+            return self.error_token("Unterminated character literal.")
+
+        self.next_char()  # Consume the closing single quote (')
+        return self.make_token(TokenType.TOKEN_KEYWORD_LETT)
+
     def handle_number(self):
         while self.peek().isdigit():
             self.next_char()
@@ -290,6 +310,9 @@ class Lexer:
         if c == '"':
             return self.handle_string()
 
+        if c == "'":
+            return self.handle_character()
+
         # Operators
         ops = {
             '+': (TokenType.TOKEN_OP_PLUS, TokenType.TOKEN_OP_PLUS_ASSIGN, TokenType.TOKEN_OP_INCREMENT),
@@ -317,6 +340,7 @@ class Lexer:
 
         # Delimiters
         delimiters = {
+            ':': TokenType.TOKEN_DELIMITER_COLON,
             ';': TokenType.TOKEN_DELIMITER_SEMICOLON,
             '(': TokenType.TOKEN_DELIMITER_LPAREN,
             ')': TokenType.TOKEN_DELIMITER_RPAREN,
